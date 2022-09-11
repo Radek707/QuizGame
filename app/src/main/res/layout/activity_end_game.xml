@@ -8,9 +8,16 @@
     tools:context=".EndGameActivity">
 
     <TextView
+        android:id="@+id/playerNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/player_name_with_placeholder"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
         android:id="@+id/pointsTextView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:textSize="30sp"
         android:text="@string/points_with_placeholder"
@@ -29,15 +36,46 @@
 
     <TextView
         android:id="@+id/newHighScoreTextView"
+        style="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="bold"
+        android:layout_marginBottom="8dp"
         android:rotation="20"
-        android:visibility="gone"
-        tools:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@id/pointsTextView"
-        app:layout_constraintLeft_toRightOf="@id/pointsTextView"
+        android:text="New high score!"
         android:textColor="@android:color/holo_green_light"
-        android:text="New high score!"/>
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/previousHighScoreTextView"
+        app:layout_constraintLeft_toRightOf="@id/pointsTextView"
+        app:layout_constraintStart_toStartOf="@+id/pointsTextView"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/highScore1TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="high score 1"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/previousHighScoreTextView"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/highScore2TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="high score 2"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/highScore1TextView"
+        />
+
+    <TextView
+        android:id="@+id/highScore3TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="high score 3"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/highScore2TextView"
+        />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

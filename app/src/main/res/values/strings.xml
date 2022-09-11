@@ -3,5 +3,6 @@
     <string name="time_with_placeholder">Time: %1$d seconds</string>
     <string name="greetings">Hello %1$s</string>
     <string name="points_with_placeholder">Points: %1$d</string>
-    <string name="previous_high_score_with_placeholder">High score: %1$d</string>
+    <string name="previous_high_score_with_placeholder">%1$s high score: %2$d</string>
+    <string name="player_name_with_placeholder">Player: 1%$s</string>
 </resources>
